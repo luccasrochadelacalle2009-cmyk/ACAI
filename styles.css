@@ -1,47 +1,52 @@
 /* ===== Açaí ERP — design mobile-first ===== */
 :root {
-  --bg: #f4f6f5;
+  /* Identidade Açaí ERP — roxo / branco / cinza */
+  --bg: #f7f6f8;
   --surface: #ffffff;
-  --surface-2: #eef2ef;
-  --text: #16231d;
-  --muted: #66756d;
-  --line: #dfe6e1;
-  --brand: #0f7a4d;
-  --brand-2: #0b5e3b;
-  --brand-soft: #e3f3ea;
-  --danger: #b4232a;
+  --surface-2: #f4f2f6;
+  --text: #24212a;
+  --muted: #777481;
+  --line: #eae8ee;
+  --brand: #542477;
+  --brand-2: #38204f;
+  --brand-soft: #f0e9f6;
+  --danger: #d94a4a;
   --danger-soft: #fdecec;
-  --warn: #a15c00;
-  --warn-soft: #fff3dd;
-  --ok: #0f7a4d;
-  --shadow: 0 1px 2px rgba(16,40,28,.06), 0 6px 20px rgba(16,40,28,.05);
-  --radius: 14px;
-  --top-h: 58px;
-  --side-w: 236px;
+  --warn: #d69a32;
+  --warn-soft: #fdf4e5;
+  --ok: #16865b;
+  --ok-soft: #e6f4ed;
+  --shadow: 0 1px 2px rgba(36,33,42,.05), 0 6px 18px rgba(36,33,42,.045);
+  --radius: 12px;
+  --top-h: 60px;
+  --side-w: 244px;
   --bottom-h: 62px;
 }
 [data-theme="dark"] {
-  --bg: #0d1511;
-  --surface: #15211b;
-  --surface-2: #1c2b23;
-  --text: #eaf2ed;
-  --muted: #9caea3;
-  --line: #2a3a31;
-  --brand: #35c184;
-  --brand-2: #23a86e;
-  --brand-soft: #153b2b;
-  --danger: #ff7b7b;
-  --danger-soft: #3d2022;
-  --warn: #ffc46b;
-  --warn-soft: #3a2c17;
+  --bg: #17131c;
+  --surface: #201a29;
+  --surface-2: #2a2235;
+  --text: #f4f1f7;
+  --muted: #a9a2b3;
+  --line: #3a3145;
+  --brand: #b487d9;
+  --brand-2: #c9a4e8;
+  --brand-soft: #332344;
+  --danger: #f07a7a;
+  --danger-soft: #402629;
+  --warn: #e8b45e;
+  --warn-soft: #3d3120;
+  --ok: #4ec08d;
+  --ok-soft: #1f3a2e;
   --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.22);
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body {
   background: var(--bg); color: var(--text);
-  font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font: 15px/1.5 Inter, Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  letter-spacing: -.01em;
   padding-bottom: calc(var(--bottom-h) + env(safe-area-inset-bottom));
 }
 button, input, select, textarea { font: inherit; color: inherit; }
@@ -99,10 +104,16 @@ a { color: var(--brand); }
 #sidebar.open { transform: none; }
 #sidebar-overlay { position: fixed; inset: 0; z-index: 55; background: rgba(0,0,0,.42); display: none; }
 #sidebar-overlay.open { display: block; }
-#nav-list { display: flex; flex-direction: column; gap: 2px; overflow-y: auto; flex: 1; }
+#nav-list { display: flex; flex-direction: column; gap: 10px; overflow-y: auto; flex: 1; }
+.nav-group { display: grid; gap: 2px; }
+.nav-group-title {
+  font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--muted); padding: 4px 10px 2px;
+}
 .nav-item {
-  display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 10px;
+  display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 9px;
   border: 0; background: transparent; text-align: left; width: 100%; color: var(--text);
+  font-size: 13px;
 }
 .nav-item:hover { background: var(--surface-2); }
 .nav-item.active { background: var(--brand-soft); color: var(--brand); font-weight: 600; }
@@ -258,6 +269,8 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .modal-head { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
 .modal-head h2 { margin: 0; flex: 1; }
 .modal .form-grid { gap: 10px; }
+.modal .nav-group + .nav-group { margin-top: 14px; }
+.modal .nav-group .grid { gap: 6px; }
 .line-item { display: grid; grid-template-columns: 1.6fr .7fr .8fr .8fr 32px; gap: 5px; align-items: end; margin-bottom: 6px; }
 .line-item input, .line-item select { min-height: 36px; padding: 6px; font-size: 12px; }
 .line-head { display: grid; grid-template-columns: 1.6fr .7fr .8fr .8fr 32px; gap: 5px; font-size: 10px; color: var(--muted); text-transform: uppercase; }

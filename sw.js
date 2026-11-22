@@ -1,6 +1,6 @@
 /* Açaí ERP — service worker: network-first (atualiza rápido) com fallback em cache para offline */
-const CACHE = 'acai-erp-v6-2026-11-21';
-const V = '?v=6';
+const CACHE = 'acai-erp-v10-2026-11-21';
+const V = '?v=10';
 const SHELL = [
   './', './index.html' + V, './styles.css' + V, './manifest.json' + V,
   './icon-192.png' + V, './icon-512.png' + V,

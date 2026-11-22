@@ -83,7 +83,7 @@ Depois de entrar, o app cria automaticamente a linha em `acai_data` no primeiro 
 ### Pelo aplicativo (recomendado)
 
 - **Configurações → Exportar dados (.json)**: baixa o objeto `state` completo, incluindo `meta`, todas as entidades e o histórico de `audit`. Faça isso antes de limpar o navegador, trocar de aparelho ou importar outro arquivo.
-- **Configurações → Importar dados (.json)**: substitui o estado local pelo conteúdo do arquivo e marca a sincronização como pendente. **Atenção:** a importação substitui o estado atual; exporte antes. Após importar, clique em **Sincronizar** para subir a versão restaurada ao Supabase.
+- **Configurações → Restaurar backup (.json)**: mescla os registros do arquivo com o estado atual por ID e data de atualização (`updatedAt`). Registros mais recentes no aparelho são preservados; nada é apagado. Após restaurar, clique em **Sincronizar agora** para enviar a versão mesclada ao Supabase.
 
 ### Pelo Supabase (inspeção/exportação)
 

@@ -1,0 +1,26 @@
+ACAÍ ERP — PUBLICAR
+===================
+
+1) Supabase (pré-requisito para login/sincronização)
+   - Abra o SQL Editor do projeto do painel-vida.
+   - Execute todo o conteúdo de SUPABASE.sql.
+
+2) GitHub Pages
+   - Crie um repositório e envie TODOS os arquivos/pastas desta pasta para a raiz, branch main.
+   - Settings -> Pages -> Deploy from a branch -> main / (root) -> Save.
+   - URL final: https://SEU-USUARIO.github.io/SEU-REPOSITORIO/
+
+3) Netlify Drop (mais rápido)
+   - https://app.netlify.com/drop
+   - Arraste esta pasta inteira.
+   - Troque o nome do site em Site settings -> Change site name.
+
+4) Atualizações
+   - Substitua os arquivos e faça push (ou arraste de novo no Netlify).
+   - Se o visual não atualizar: Ctrl+Shift+R.
+
+Regras
+------
+- Use apenas a chave publishable/anon (já embutida em js/core.js).
+- NUNCA use service_role no navegador.
+- Não abra index.html com file://.
